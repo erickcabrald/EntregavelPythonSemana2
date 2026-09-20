@@ -19,4 +19,4 @@ while tentativas < MAX_TENTATIVAS and not autenticado:
             print(f"Senha incorreta! Tentativas restantes: {tentativas_restantes}\n")
 
 if not autenticado:
-    print("\nAcesso bloqueado! Número máximo de 3 erros atingido.")
+    print("\nAcesso bloqueado! Número máximo de 3 erros atingido.") 
