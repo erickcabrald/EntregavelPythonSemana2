@@ -20,3 +20,62 @@ while tentativas < MAX_TENTATIVAS and not autenticado:
 
 if not autenticado:
     print("\nAcesso bloqueado! Número máximo de 3 erros atingido.") 
+
+
+
+"""
+```portugol id="j7x4pq"
+programa
+{
+    funcao inicio()
+    {
+        cadeia SENHA_CORRETA = "python123"
+        inteiro MAX_TENTATIVAS = 3
+        inteiro tentativas = 0
+        logico autenticado = falso
+
+        escreva("--- Sistema de Autenticação ---\n")
+
+        enquanto (tentativas < MAX_TENTATIVAS e nao autenticado)
+        {
+            cadeia senha_digitada
+
+            escreva("Digite a senha de acesso: ")
+            leia(senha_digitada)
+
+            tentativas = tentativas + 1
+
+            se (senha_digitada == SENHA_CORRETA)
+            {
+                autenticado = verdadeiro
+
+                escreva("\nAcesso concedido! Bem-vindo ao sistema.\n")
+            }
+            senao
+            {
+                inteiro tentativas_restantes
+
+                tentativas_restantes = MAX_TENTATIVAS - tentativas
+
+                se (tentativas_restantes > 0)
+                {
+                    escreva(
+                        "Senha incorreta! Tentativas restantes: ",
+                        tentativas_restantes,
+                        "\n\n"
+                    )
+                }
+            }
+        }
+
+        se (nao autenticado)
+        {
+            escreva(
+                "\nAcesso bloqueado! Número máximo de 3 erros atingido.\n"
+            )
+        }
+    }
+}
+```
+
+"""
